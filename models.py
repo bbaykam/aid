@@ -10,12 +10,12 @@ Base = declarative_base()
 class Disease(Base):
     __tablename__ = 'diseases'
     id = Column(Integer, Sequence('diseases_id_seq'), primary_key=True)
-    IDC_10 =  Column(String(15))
+    IDC_10 =  Column(String(8))
     disease = Column(String(256))
 
      def __repr__(self):
         return "<Disease(IDC_10='%s', disease='%s')>" % (
-                                self.IDC_10, self.disease)
+                                self.code, self.name)
 
 class ClassName(object):
     """docstring for ."""
