@@ -20,7 +20,7 @@ class Users(Base):
 
 
 
-    def __init__(self, first_name, last_name, birth_date, gender, email, password, citizen_id):
+    def __init__(self, first_name, last_name, birth_date, gender, email, password, citizen_id=[]):
         self.first_name = first_name
         self.last_name = last_name
         self.birth_date = birth_date
@@ -28,3 +28,5 @@ class Users(Base):
         self.email = email
         self.password = password
         self.citizen_id = citizen_id
+
+basar = Users("basar", "baykam", "1971-03-18", "male", "bs@gmail.com", "12345")
